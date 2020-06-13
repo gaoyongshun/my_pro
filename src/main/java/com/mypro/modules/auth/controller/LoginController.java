@@ -4,7 +4,9 @@ import com.alibaba.fastjson.JSONObject;
 import com.mypro.common.vo.Result;
 import com.mypro.modules.auth.entity.SysLoginModel;
 import com.mypro.modules.system.entity.SysUser;
+import com.mypro.modules.system.service.ISysUserService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,6 +15,9 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 @RequestMapping("/noauth")
 public class LoginController {
+
+    @Autowired
+    ISysUserService sysUserService;
 
     @RequestMapping(value="/login", method = RequestMethod.POST)
     public Result<JSONObject> login(SysLoginModel sysLoginModel){
