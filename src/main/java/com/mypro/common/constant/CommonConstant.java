@@ -8,4 +8,8 @@ public class CommonConstant {
     public static final Integer SC_OK_200 = 200;
     /**访问权限认证未通过 510*/
     public static final Integer SC_JEECG_NO_AUTHZ=510;
+
+
+    /*************************** Token *********************************/
+    public static final String PREFIX_USER_TOKEN  = "PREFIX_USER_TOKEN_";
 }

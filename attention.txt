@@ -1,0 +1,9 @@
+1.mybatis 无法扫描到xml文件问题。
+    在pom.xml中的build配置扫描源文件，打包时，将配置文件也打包进去。
+2.shiro问题
+    shiro中包含三个主要对象 filterFactory，securityManager，realm ，配置时，首先创建realm并重写授权与认证方法。然后设置defaultSecurityManager的内容，设置realm对象。
+    创建filterFactory时，设置securityManager对象。
+3.redisTemplate 未注入问题
+    将RedisUtils中的RedisTemplate<String,Object> 改为 RedisTemplate 即可，原因待分析：https://blog.csdn.net/zhaoheng314/article/details/81564166?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase
+4.queryWrapper 条件构造器
+    使用通用类QueryGenerator.initWrapper。或者自己代码实现，例如：queryWrapper.and(i -> i.eq("name","123")) 匹配字段name值为123的数据

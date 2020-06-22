@@ -12,7 +12,7 @@ import java.net.UnknownHostException;
 
 @Slf4j
 @SpringBootApplication
-@MapperScan(basePackages = "com.**.Mapper")
+@MapperScan("com.mypro.**.mapper")
 public class MyProApplication {
     public static void main(String[] args) throws UnknownHostException {
         //System.setProperty("spring.devtools.restart.enabled", "true");
